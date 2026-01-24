@@ -1,4 +1,5 @@
 # Energy Drinks
+[![ContentDB](https://content.luanti.org/packages/Sheriff-Unit-3/energy_drinks/shields/downloads/)](https://content.luanti.org/packages/Sheriff-Unit-3/energy_drinks/)  
 A mod that adds multiple colors of energy drinks to the luanti game engine.
 
 ## Game Support
