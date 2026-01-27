@@ -6,7 +6,7 @@ A mod that adds multiple colors of energy drinks to the luanti game engine.
 This mod currently supports Minetest, Mineclonia, and VoxeLibre.
 
 ## Mod Support
-This mod currently only supports [Farming Redo](https://content.luanti.org/packages/TenPlus1/farming/)
+This mod currently only supports [Farming Redo](https://content.luanti.org/packages/TenPlus1/farming/), Sugar, and X Farming.
 
 ## Attribution
 textures: [Sheriff-Unit-3](https://content.luanti.org/users/Sheriff-Unit-3/) [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)  
