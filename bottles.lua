@@ -1,68 +1,22 @@
--- short hand
-local eds = "energy_drinks:"
-local pb = "plastic_bottle"
-local ed = "_energy_drink"
-local ged = {energy_drink = 1}
-local cie = core.item_eat(1)
+local S, PS = core.get_translator("energy_drinks")
 
 -- Empty Bottle
-core.register_craftitem(eds.."bottle", {
-    description = "Plastic Bottle",
-    groups = {bottle = 1, empty = 1},
-    inventory_image = pb..".png"
+core.register_craftitem("energy_drinks:bottle", {
+  description = S("Plastic Bottle"),
+  groups = {bottle = 1, empty = 1},
+  inventory_image = "plastic_bottle.png"
 })
-core.register_alias(pb, eds.."bottle")
-
--- Red Energy Drink
-core.register_craftitem(eds.."red"..ed, {
-    description = "Red Energy Drink",
-    groups = ged,
-    inventory_image = "red"..ed..".png",
-    on_use = cie
-})
-core.register_alias("red"..ed, eds.."red"..ed)
-
--- Blue Energy Drink
-core.register_craftitem(eds.."blue"..ed, {
-    description = "Blue Energy Drink",
-    groups = ged,
-    inventory_image = "blue"..ed..".png",
-    on_use = cie
-})
-core.register_alias("blue"..ed, eds.."blue"..ed)
-
--- Yellow Energy Drink
-core.register_craftitem(eds.."yellow"..ed, {
-    description = "Yellow Energy Drink",
-    groups = ged,
-    inventory_image = "yellow"..ed..".png",
-    on_use = cie
-})
-core.register_alias("yellow"..ed, eds.."yellow"..ed)
-
--- Orange Energy Drink
-core.register_craftitem(eds.."orange"..ed, {
-    description = "Orange Energy Drink",
-    groups = ged,
-    inventory_image = "orange"..ed..".png",
-    on_use = cie
-})
-core.register_alias("orange"..ed, eds.."orange"..ed)
-
--- Green Energy Drink
-core.register_craftitem(eds.."green"..ed, {
-    description = "Green Energy Drink",
-    groups = ged,
-    inventory_image = "green"..ed..".png",
-    on_use = cie
-})
-core.register_alias("green"..ed, eds.."green"..ed)
-
--- White Energy Drink
-core.register_craftitem(eds.."white"..ed, {
-    description = "White Energy Drink",
-    groups = ged,
-    inventory_image = "white"..ed..".png",
-    on_use = cie
-})
-core.register_alias("white"..ed, eds.."white"..ed)
+core.register_alias("plastic_bottle", "energy_drinks:bottle")
+-- colors of drinks to register
+local drinks = {"red", "blue", "yellow", "orange", "green", "white"}
+-- for loop to register them
+for k, drink in ipairs(drinks) do
+  local des = string.gsub(drink, "^%a", string.upper)
+  core.register_craftitem("energy_drinks:"..drink.."_energy_drink", {
+    description = S("@1 Energy Drink", des),
+    groups = {energy_drink = 1},
+    inventory_image = drink.."_energy_drink.png",
+    on_use = core.item_eat(1)
+  })
+  core.register_alias(drink.."_energy_drink", "energy_drinks:"..drink.."_energy_drink")
+end
