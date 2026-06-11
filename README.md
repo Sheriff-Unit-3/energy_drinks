@@ -1,14 +1,28 @@
 # Energy Drinks
-[![ContentDB](https://content.luanti.org/packages/Sheriff-Unit-3/energy_drinks/shields/downloads/)](https://content.luanti.org/packages/Sheriff-Unit-3/energy_drinks/) [![Translation status](https://translate.codeberg.org/widget/energy_drinks/svg-badge.svg)](https://translate.codeberg.org/engage/energy_drinks/) [![Translation status](https://translate.codeberg.org/widget/energy_drinks/-/fr/svg-badge.svg)](https://translate.codeberg.org/engage/energy_drinks/) [![Translation status](https://translate.codeberg.org/widget/energy_drinks/-/it/svg-badge.svg)](https://translate.codeberg.org/engage/energy_drinks/) [![Translation status](https://translate.codeberg.org/widget/energy_drinks/-/ru/svg-badge.svg)](https://translate.codeberg.org/engage/energy_drinks/) [![Translation status](https://translate.codeberg.org/widget/energy_drinks/-/es/svg-badge.svg)](https://translate.codeberg.org/engage/energy_drinks/)  
-A mod that adds multiple colors of energy drinks to the luanti game engine.
+[![ContentDB](https://content.luanti.org/packages/Sheriff-Unit-3/energy_drinks/shields/downloads/)](https://content.luanti.org/packages/Sheriff-Unit-3/energy_drinks/) [![Translation status](https://translate.codeberg.org/widget/energy_drinks/svg-badge.svg)](https://translate.codeberg.org/engage/energy_drinks/)
+
+A mod that adds multiple colors of energy drinks to the Luanti game engine.
 
 ## Game Support
 This mod currently supports Minetest, Mineclonia, and VoxeLibre.
 
 ## Mod Support
-This mod currently only supports [Farming Redo](https://content.luanti.org/packages/TenPlus1/farming/), Sugar, and X Farming.
+This mod currently only supports [Farming Redo](https://content.luanti.org/packages/TenPlus1/farming/), Sugar, and X Farming for crafting recipes.
 
-## Attribution
-textures: [Sheriff-Unit-3](https://content.luanti.org/users/Sheriff-Unit-3/) [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)  
-code: [Sheriff-Unit-3](https://content.luanti.org/users/Sheriff-Unit-3/) [MIT](https://opensource.org/license/mit)  
-Special thanks to [SiriusOHara](https://translate.codeberg.org/user/SiriusOHara/) for completing some of the translations!
+## Credits
+
+Developers:
+* [Sheriff-Unit-3 (Sheriff_U3)](https://codeberg.org/Sheriff_U3)
+
+Translators: 
+* [Atalanttore](https://codeberg.org/Atalanttore)  
+* [Heimen Stoffels](https://codeberg.org/Vistaus)  
+* [KoheryPatala](https://codeberg.org/KoheryPatala)  
+* [SiriusOHara](https://codeberg.org/SiriusOHara)  
+
+## Licensing
+Textures by: [Sheriff-Unit-3](https://content.luanti.org/users/Sheriff-Unit-3/) under [CC0](/LICENSE.md#media-and-translation-license)  
+
+Code by: [Sheriff-Unit-3](https://content.luanti.org/users/Sheriff-Unit-3/) under [MIT](/LICENSE.md#code-license)  
+
+Translations are under [CC0](/LICENSE.md#media-and-translation-license).
