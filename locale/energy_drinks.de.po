@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-27 09:29-0600\n"
+"POT-Creation-Date: 2026-06-11 22:28-0500\n"
 "PO-Revision-Date: 2026-04-06 20:57+0000\n"
 "Last-Translator: Atalanttore <atalanttore@noreply.codeberg.org>\n"
 "Language-Team: German <https://translate.codeberg.org/projects/energy_drinks/"
@@ -23,6 +23,30 @@ msgstr ""
 msgid "Plastic Bottle"
 msgstr "Plastikflasche"
 
-#: bottles.lua:16
+#: bottles.lua:14
 msgid "@1 Energy Drink"
 msgstr "@1 Energy-Drink"
+
+#: init.lua:7
+msgid "Red"
+msgstr ""
+
+#: init.lua:8
+msgid "Blue"
+msgstr ""
+
+#: init.lua:9
+msgid "Yellow"
+msgstr ""
+
+#: init.lua:10
+msgid "Orange"
+msgstr ""
+
+#: init.lua:11
+msgid "Green"
+msgstr ""
+
+#: init.lua:12
+msgid "White"
+msgstr ""
