@@ -1,4 +1,4 @@
--- mod load paths
+-- Mod load paths
 local default_load = core.get_modpath("default")
 local basic_materials_load = core.get_modpath("basic_materials")
 local farming_load = core.get_modpath("farming")
@@ -10,12 +10,12 @@ local mcl_core_load = core.get_modpath("mcl_core")
 local mcl_buckets_load = core.get_modpath("mcl_buckets")
 local mcl_dyes_load = core.get_modpath("mcl_dyes")
 local mcl_dye_load = core.get_modpath("mcl_dye")
--- list of drinks
-local drinks = {"red", "blue", "yellow", "orange", "green", "white"}
--- short hand
+
+-- Other local variables
+local drinks = energy_drinks.drinks
 local pb = "plastic_bottle"
 
--- default support
+-- MTG support
 if default_load or basic_materials_load then
   if basic_materials_load then
     core.register_craft({
@@ -33,11 +33,9 @@ end
 
 -- dye and bucket support
 if dye_load and bucket_load and farming_load or x_farming_load or sugar_load then
-  local bw = "group:water_bucket"
-  local b = "bucket"
   if farming.mod == "redo" then
     -- Registers all drink crafts when playing MTG with Farming Redo
-    for k, drink in ipairs(drinks) do
+    for drink, _ in pairs(drinks) do
       core.register_craft({
         output = drink.."_energy_drink 6",
         recipe = {
@@ -50,7 +48,7 @@ if dye_load and bucket_load and farming_load or x_farming_load or sugar_load the
     end
   elseif x_farming_load then
     -- Registers all drink crafts when playing MTG with X Farming
-    for k, drink in ipairs(drinks) do
+    for drink, _ in pairs(drinks) do
       core.register_craft({
         output = drink.."_energy_drink 6",
         recipe = {
@@ -63,7 +61,7 @@ if dye_load and bucket_load and farming_load or x_farming_load or sugar_load the
     end
   elseif sugar_load then
     -- Registers all drink crafts when playing MTG with Sugar
-    for k, drink in ipairs(drinks) do
+    for drink, _ in pairs(drinks) do
       core.register_craft({
         output = drink.."_energy_drink 6",
         recipe = {
@@ -76,7 +74,7 @@ if dye_load and bucket_load and farming_load or x_farming_load or sugar_load the
     end
   else
     -- Registers all drink crafts when playing MTG without any of the supported mods
-    for k, drink in ipairs(drinks) do
+    for drink, _ in pairs(drinks) do
       core.register_craft({
         output = drink.."_energy_drink 6",
         recipe = {
@@ -97,7 +95,7 @@ if mcl_buckets_load and mcl_dyes_load and mcl_core_load then
     output = "energy_drinks:bottle 2",
     recipe = {{"mcl_core:reeds"}, {"mcl_core:reeds"}}
   })
-  for k, drink in ipairs(drinks) do
+  for drink, _ in pairs(drinks) do
     core.register_craft({
       output = drink.."_energy_drink 6",
       recipe = {
@@ -119,7 +117,7 @@ if mcl_buckets_load and mcl_dye_load and mcl_core_load then
     output = "energy_drinks:bottle 2",
     recipe = {{"mcl_core:reeds"}, {"mcl_core:reeds"}}
   })
-  for k, drink in ipairs(drinks) do
+  for drink, _ in pairs(drinks) do
     core.register_craft({
       output = drink.."_energy_drink 6",
       recipe = {
