@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-11 22:28-0500\n"
+"POT-Creation-Date: 2026-06-13 18:55-0500\n"
 "PO-Revision-Date: 2026-06-13 08:07+0000\n"
 "Last-Translator: gallegonovato <gallegonovato@noreply.codeberg.org>\n"
 "Language-Team: Spanish <https://translate.codeberg.org/projects/"
@@ -28,25 +28,40 @@ msgid "@1 Energy Drink"
 msgstr "@1 Bebida Energetica"
 
 #: init.lua:7
-msgid "Red"
-msgstr "Rojo"
+msgid "Strawberry"
+msgstr ""
 
 #: init.lua:8
-msgid "Blue"
+#, fuzzy
+msgid "Blueberry"
 msgstr "Azul"
 
 #: init.lua:9
-msgid "Yellow"
-msgstr "Amarillo"
+msgid "Lemon"
+msgstr ""
 
 #: init.lua:10
 msgid "Orange"
 msgstr "Naranja"
 
 #: init.lua:11
-msgid "Green"
+#, fuzzy
+msgid "Green Apple"
 msgstr "Verde"
 
 #: init.lua:12
-msgid "White"
-msgstr "Blanco"
+msgid "Icy Snow"
+msgstr ""
+
+#: init.lua:13
+msgid "Grape"
+msgstr ""
+
+#~ msgid "Red"
+#~ msgstr "Rojo"
+
+#~ msgid "Yellow"
+#~ msgstr "Amarillo"
+
+#~ msgid "White"
+#~ msgstr "Blanco"
