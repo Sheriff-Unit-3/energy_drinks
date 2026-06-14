@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-13 18:55-0500\n"
-"PO-Revision-Date: 2026-06-13 08:07+0000\n"
+"PO-Revision-Date: 2026-06-15 08:07+0000\n"
 "Last-Translator: gallegonovato <gallegonovato@noreply.codeberg.org>\n"
 "Language-Team: Spanish <https://translate.codeberg.org/projects/"
 "energy_drinks/energy_drinks/es/>\n"
@@ -29,33 +29,31 @@ msgstr "@1 Bebida Energetica"
 
 #: init.lua:7
 msgid "Strawberry"
-msgstr ""
+msgstr "Fresa"
 
 #: init.lua:8
-#, fuzzy
 msgid "Blueberry"
-msgstr "Azul"
+msgstr "Arándano"
 
 #: init.lua:9
 msgid "Lemon"
-msgstr ""
+msgstr "Limón"
 
 #: init.lua:10
 msgid "Orange"
 msgstr "Naranja"
 
 #: init.lua:11
-#, fuzzy
 msgid "Green Apple"
-msgstr "Verde"
+msgstr "Manzana verde"
 
 #: init.lua:12
 msgid "Icy Snow"
-msgstr ""
+msgstr "Nieve helada"
 
 #: init.lua:13
 msgid "Grape"
-msgstr ""
+msgstr "Uva"
 
 #~ msgid "Red"
 #~ msgstr "Rojo"
