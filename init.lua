@@ -1,18 +1,7 @@
-energy_drinks = {}
-energy_drinks.S, energy_drinks.PS = core.get_translator("energy_drinks")
-
-local S = energy_drinks.S
-
-energy_drinks.drinks = {
-  red = S("Strawberry"),
-  blue = S("Blueberry"),
-  yellow = S("Lemon"),
-  orange = S("Orange"),
-  green = S("Green Apple"),
-  white = S("Icy Snow"),
-  purple = S("Grape")
-}
-
+__fnl_global__energy_2ddrinks = {}
+__fnl_global__energy_2ddrinks.S, __fnl_global__energy_2ddrinks.PS = core.get_translator("energy_drinks")
+local S = __fnl_global__energy_2ddrinks.S
+__fnl_global__energy_2ddrinks.drinks = {blue = S("Blueberry"), green = S("Green Apple"), orange = S("Orange"), purple = S("Grape"), red = S("Strawberry"), white = S("Icy Snow"), yellow = S("Lemon")}
 local modpath = core.get_modpath(core.get_current_modname())
-dofile(modpath.."/bottles.lua")
-dofile(modpath.."/crafts.lua")
+dofile((modpath .. "/bottles.lua"))
+return dofile((modpath .. "/crafts.lua"))
