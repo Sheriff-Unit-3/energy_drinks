@@ -1,13 +1,13 @@
 globals = {
-  energy_drinks,
+  "energy_drinks",
 }
 
 read_globals = {
   -- Luanti
-  core,
-  minetest,
+  "core",
+  "minetest",
 
   -- Mods
-  default,
-  farming,
+  "default",
+  "farming",
 }
