@@ -1,9 +1,12 @@
-on: 
+name: Luacheck
+
+on:
   push:
     branches:
       - master
       - main
   pull_request:
+
 jobs:
   luacheck:
     runs-on: debian-latest
