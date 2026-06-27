@@ -110,8 +110,6 @@ end
 
 -- voxel libre support
 if mcl_buckets_load and mcl_dye_load and mcl_core_load then
-  local bw = "mcl_buckets:bucket_water"
-  local b = "mcl_buckets:bucket_empty"
   -- Registers craft for empty bottle
   core.register_craft({
     output = "energy_drinks:bottle 2",
