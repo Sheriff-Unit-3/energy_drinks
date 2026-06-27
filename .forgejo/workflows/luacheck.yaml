@@ -1,9 +1,12 @@
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
 jobs:
   luacheck:
-    runs-on: codeberg-tiny-lazy
-    container:
-      image: ghcr.io/catthehacker/ubuntu:act-latest
+    runs-on: debian-latest
     steps:
        - name: checkout
          uses: https://code.forgejo.org/actions/checkout@v4
@@ -12,4 +15,4 @@ jobs:
            sudo apt-get update && sudo apt-get install -y luarocks
            luarocks install luacheck
            export PATH="$PATH:$(luarocks config user_bin)"
-           luacheck .
+           luacheck
