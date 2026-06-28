@@ -2,19 +2,22 @@ name: Optimize PNGs
 
 on:
   push:
-  pull_request:
+    branches:
+      - master
+      - main
+    paths:
+      - '**/*.png'
 
 jobs:
   optimize-pngs:
-    runs-on: codeberg-small-lazy
+    runs-on: ubuntu-latest
 
     steps:
       - uses: https://code.forgejo.org/actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
-      - name: Download oxipng
-        id: cache-oxipng
+      - name: Cache oxipng
         uses: https://code.forgejo.org/actions/cache@v4
         with:
           path: ~/.cache/oxipng/oxipng
@@ -32,7 +35,19 @@ jobs:
           echo "$HOME/.cache/oxipng" >> "$GITHUB_PATH"
 
       - name: Optimize PNGs
-        run: oxipng -r --opt max --strip safe .
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          if [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            FILES=$(git ls-files '*.png')
+          else
+            FILES=$(git diff --name-only --diff-filter=ACM "$BEFORE_SHA" HEAD -- '*.png')
+          fi
+          if [ -z "$FILES" ]; then
+            echo "No new or modified PNGs to optimize"
+          else
+            oxipng --opt max --strip safe $FILES
+          fi
 
       - name: Commit
         run: |
