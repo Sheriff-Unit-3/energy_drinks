@@ -21,18 +21,13 @@
 (when (or default-load basic-materials-load)
 	(if basic-materials-load
 		(core.register_craft {
-			:output "energy_drink:bottle 2"
+			:output "energy-drink:bottle 2"
 			:recipe [
 				["basic_materials:plastic_sheet"]
-				["basic_materials:plastic_sheet"]
-			]
-		})
+				["basic_materials:plastic_sheet"]]})
 		(core.register_craft {
-			:output "energy_drinks:bottle 2"
-			:recipe [["default:papyrus"] ["default:papyrus"]]
-		})
-	)
-)
+			:output "energy-drinks:bottle 2"
+			:recipe [["default:papyrus"] ["default:papyrus"]]})))
 
 ;; Register the drinks recipes for MTG
 (when (or (or (and (and dye-load bucket-load) farming-load) x-farming-load) sugar-load)
@@ -40,116 +35,78 @@
 		(each [drink _ (pairs drinks)]
 			(core.register_craft {
 				:output (.. drink "_energy_drink 6")
-				:recipe [
-					[
+				:recipe [[
 						(.. "dye:" drink)
 						"group:water_bucket"
-						"farming:sugar"
-					]
+						"farming:sugar"]
 					[pb pb pb]
-					[pb pb pb]
-				]
-				:replacements [["group:water_bucket" :bucket]]
-			})
-		)
+					[pb pb pb]]
+				:replacements [["group:water_bucket" :bucket]]}))
 	x-farming-load ;; Else if
 		(each [drink _ (pairs drinks)]
 			(core.register_craft {:output (.. drink "_energy_drink 6")
-				:recipe [
-					[
+				:recipe [[
 						(.. "dye:" drink)
 						"group:water_bucket"
-						"x_farming:sugar"
-					]
+						"x_farming:sugar"]
 					[pb pb pb]
-					[pb pb pb]
-				]
-				:replacements [["group:water_bucket" :bucket]]
-			})
-		)
+					[pb pb pb]]
+				:replacements [["group:water_bucket" :bucket]]}))
 	sugar-load ;; Else if
 		(each [drink _ (pairs drinks)]
 			(core.register_craft {
 				:output (.. drink "_energy_drink 6")
-				:recipe [
-					[
+				:recipe [[
 						(.. "dye:" drink)
 						"group:water_bucket"
-						"sugar:sugar"
-					]
+						"sugar:sugar"]
 					[pb pb pb]
-					[pb pb pb]
-				]
-				:replacements [["group:water_bucket" :bucket]]
-			})
-		)
+					[pb pb pb]]
+				:replacements [["group:water_bucket" :bucket]]}))
 	;; Else
 		(each [drink _ (pairs drinks)]
 			(core.register_craft {
 				:output (.. drink "_energy_drink 6")
-				:recipe [
-					[
+				:recipe [[
 						(.. "dye:" drink)
 						"group:water_bucket"
-						(.. "dye:" drink)
-					]
+						(.. "dye:" drink)]
 					[pb pb pb]
-					[pb pb pb]
-				]
-				:replacements [["group:water_bucket" :bucket]]
-			})
-		)
-	)
-)
+					[pb pb pb]]
+				:replacements [["group:water_bucket" :bucket]]}))))
 
 ;; Register the drinks recipes for Mineclonia
 (when (and (and mcl-buckets-load mcl-dyes-load) mcl-core-load)
 	(core.register_craft {
 		:output "energy_drinks:bottle 2"
-		:recipe [["mcl_core:reeds"] ["mcl_core:reeds"]]
-	})
+		:recipe [["mcl_core:reeds"] ["mcl_core:reeds"]]})
 	(each [drink _ (pairs drinks)]
 		(core.register_craft {
 			:output (.. drink "_energy_drink 6")
-			:recipe [
-				[
+			:recipe [[
 					(.. "mcl_dyes:" drink)
 					"mcl_buckets:bucket_water"
-					"mcl_core:sugar"
-				]
+					"mcl_core:sugar"]
 				[pb pb pb]
-				[pb pb pb]
-			]
+				[pb pb pb]]
 			:replacements [[
 				"mcl_buckets:bucket_water"
-				"mcl_buckets:bucket_empty"
-			]]
-		})
-	)
-)
+				"mcl_buckets:bucket_empty"]]})))
 
 ;; Register the drinks recipes for Mineclone2
 (when (and (and mcl-buckets-load mcl-dye-load) mcl-core-load)
 	(core.register_craft {
 		:output "energy_drinks:bottle 2"
-		:recipe [["mcl_core:reeds"] ["mcl_core:reeds"]]
-	})
+		:recipe [["mcl_core:reeds"] ["mcl_core:reeds"]]})
 	(each [drink _ (pairs drinks)]
 		(core.register_craft {
 			:output (.. drink "_energy_drink 6")
-			:recipe [
-				[
+			:recipe [[
 					(.. "mcl_dye:" drink)
 					"mcl_buckets:bucket_water"
-					"mcl_core:sugar"
-				]
+					"mcl_core:sugar"]
 				[pb pb pb]
-				[pb pb pb]
-			]
+				[pb pb pb]]
 			:replacements [[
 				"mcl_buckets:bucket_water"
-				"mcl_buckets:bucket_empty"
-			]]
-		})
-	)
-)
+				"mcl_buckets:bucket_empty"]]})))

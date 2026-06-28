@@ -11,8 +11,7 @@
 	:purple (S :Grape)
 	:red (S :Strawberry)
 	:white (S "Icy Snow")
-	:yellow (S :Lemon)
-})
+	:yellow (S :Lemon)})
 
 ;; Load mod files
 (local modpath (core.get_modpath (core.get_current_modname)))
