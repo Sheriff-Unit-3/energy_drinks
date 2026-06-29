@@ -12,7 +12,7 @@
 (local mcl-dye-load (core.get_modpath :mcl_dye))
 
 ;; Localize the global table
-(local drinks energy-drinks.drinks)
+(local drinks energy_drinks.drinks)
 
 ;; Our bottle
 (local pb :plastic_bottle)
@@ -26,7 +26,7 @@
 				["basic_materials:plastic_sheet"]
 				["basic_materials:plastic_sheet"]]})
 		(core.register_craft {
-			:output "energy-drinks:bottle 2"
+			:output "energy_drinks:bottle 2"
 			:recipe [["default:papyrus"] ["default:papyrus"]]})))
 
 ;; Register the drinks recipes for MTG

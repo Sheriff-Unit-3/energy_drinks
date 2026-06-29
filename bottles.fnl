@@ -1,5 +1,5 @@
 ;; Get the translator
-(local S energy-drinks.S)
+(local S energy_drinks.S)
 
 ;; Register the bottle
 (core.register_craftitem "energy_drinks:bottle" {
@@ -9,7 +9,7 @@
 (core.register_alias :plastic_bottle "energy_drinks:bottle")
 
 ;; Register each drink
-(each [color des (pairs energy-drinks.drinks)]
+(each [color des (pairs energy_drinks.drinks)]
 	(core.register_craftitem (.. "energy_drinks:" color :_energy_drink) {
 			:description (S "@1 Energy Drink" des)
 			:groups {:energy_drink 1}

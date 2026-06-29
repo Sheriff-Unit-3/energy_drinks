@@ -1,10 +1,10 @@
 ;; Define the global table
-(global energy-drinks {})
-(set (energy-drinks.S energy-drinks.PS) (core.get_translator :energy_drinks))
+(global energy_drinks {})
+(set (energy_drinks.S energy_drinks.PS) (core.get_translator :energy_drinks))
 
 ;; List of drinks
-(local S energy-drinks.S)
-(set energy-drinks.drinks {
+(local S energy_drinks.S)
+(set energy_drinks.drinks {
 	:blue (S :Blueberry)
 	:green (S "Green Apple")
 	:orange (S :Orange)
